@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail du wish{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Wish details for : "{{ wish.title | capitalize }}"</h1>
+    <h4>author : {{ wish.author }}</h4>
+    <h5>on {{ wish.dateCreated | date("m/d/Y") }}</h5>
+    <p>{{ wish.description | capitalize | nl2br }}</p>
+</div>
+{% endblock %}

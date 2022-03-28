@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bucket-List - About us{% endblock %}
+
+{% block body %}
+    <h2>La dream team</h2>
+    {% for membre in membres %}
+        <div class="team-member">
+            <h3>
+                {{ membre.firstname }} {{ membre.lastname }}
+                {{ membre.lastname == 'Potencier' ? "&#128151" : "" }}
+            </h3>
+            <div class="left">
+                <img src="{{ membre.picture }}" alt="{{ membre.lastname }}" width="200">
+            </div>
+            <div class="right">
+                <p class="legend">né le {{ membre.dateOfBirth }}, créateur de {{ membre.creatorOf }}</p>
+                <p class="description">{{ membre.description }}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
