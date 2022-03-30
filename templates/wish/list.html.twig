@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wish-List{% endblock %}
+
+{% block body %}
+
+<div class="wish-list">
+    <h2>Wish-list</h2>
+    <ul>
+        {% for wish in wishes %}
+            <li>
+                <a href="{{ path('wish_detail',{'id': wish.id}) }}">
+                    {{ wish.title | capitalize }}
+                </a>
+                <span>
+                    by {{ wish.author }}
+                </span></li>
+        {% else %}
+            <p>No wishes at this time.</p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
