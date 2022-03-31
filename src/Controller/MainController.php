@@ -6,10 +6,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends \Symfony\Bundle\FrameworkBundle\Controller\AbstractController
 {
-    #[Route('/', name: "main_accueil")]
+    #[Route('/', name: "main_home")]
     public function accueil(): \Symfony\Component\HttpFoundation\Response
     {
-        return $this->render('main/accueil.html.twig');
+        return $this->render('main/home.html.twig');
     }
     #[Route('/about_us', name: "main_aboutUs")]
     public function aboutUs(): \Symfony\Component\HttpFoundation\Response

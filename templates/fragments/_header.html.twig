@@ -1,11 +1,11 @@
 <header class="header">
-    <a class="logo" href="{{ asset('/') }}" >
+    <a class="logo" href="{{ path('main_home') }}" >
         <img class="logo" src="{{ asset('resources/images/logo.png') }}" width="56" height="64" alt="Logo Bucket-List"/>
         <span class="logo">Bucket-List</span>
     </a>
     <nav>
-        <a href="{{ asset('/') }}">Accueil</a>
-        <a href="{{ asset('wish/list') }}">Wish-list</a>
-        <a href="{{ asset('about_us') }}">About us</a>
+        <a href="{{ path('main_home') }}">Accueil</a>
+        <a href="{{ path('wish_list') }}">Wish-list</a>
+        <a href="{{ path('main_aboutUs') }}">About us</a>
     </nav>
 </header>
