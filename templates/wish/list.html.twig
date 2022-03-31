@@ -5,6 +5,15 @@
 {% block body %}
 
 <div class="wish-list">
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="flash-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
     <h2>Wish-list</h2>
     <ul>
         {% for wish in wishes %}
