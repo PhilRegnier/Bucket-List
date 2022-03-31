@@ -55,7 +55,7 @@ class WishController extends AbstractController
             $em->persist($wish);
             $em->flush();
             $this->addFlash('success','Be happy ! Your wish has been added');
-            return $this->redirectToRoute('wish_list');
+            return $this->redirectToRoute('wish_detail', ["id" => $wish->getId()]);
         }
 
         return $this->render(

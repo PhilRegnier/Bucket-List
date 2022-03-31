@@ -15,6 +15,7 @@ class Wish
     private $id;
 
     #[ORM\Column(type: 'string', length: 250)]
+    #[Assert\Type('string')]
     #[Assert\NotBlank(message: "Write a wish")]
     #[Assert\Length(
         min: 2,
@@ -25,9 +26,11 @@ class Wish
     private $title;
 
     #[ORM\Column(type: 'text', nullable: true)]
+    #[Assert\Type('string')]
     private $description;
 
     #[ORM\Column(type: 'string', length: 50)]
+    #[Assert\Type('string')]
     #[Assert\NotBlank(message: "you have to sign yur wish.")]
     private $author;
 

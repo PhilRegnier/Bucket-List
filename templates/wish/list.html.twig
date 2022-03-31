@@ -6,27 +6,21 @@
 
 <div class="wish-list">
 
-    {% for label, messages in app.flashes %}
-        {% for message in messages %}
-            <div class="flash-{{ label }}">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endfor %}
-
     <h2>Wish-list</h2>
-    <ul>
+    <div class="list-group">
         {% for wish in wishes %}
-            <li>
-                <a href="{{ path('wish_detail',{'id': wish.id}) }}">
+                <a
+                        href="{{ path('wish_detail',{'id': wish.id}) }}"
+                        class="list-group-item list-group-item-action"
+                >
                     {{ wish.title | capitalize }}
+                    <span>
+                        by {{ wish.author }}
+                    </span>
                 </a>
-                <span>
-                    by {{ wish.author }}
-                </span></li>
         {% else %}
             <p>No wishes at this time.</p>
         {% endfor %}
-    </ul>
+    </div>
 </div>
 {% endblock %}

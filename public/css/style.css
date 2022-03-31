@@ -12,6 +12,19 @@ html {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+
 .header {
     padding-top: 20px;
     background: #16A085;
@@ -19,18 +32,6 @@ html {
 .header a {
     padding-left: 150px;
     color: #17202A;
-}
-.header a:link {
-    text-decoration: none;
-}
-.header a:hover {
-    text-decoration: none;
-}
-.header a:visited {
-    text-decoration: none;
-}
-.header a:active {
-    text-decoration: none;
 }
 
 span.logo {
@@ -64,37 +65,9 @@ h3 {
     padding-top: 1em;
     padding-bottom: 1em;
 }
-
 .wish-list {
-    width: 100%;
-    text-align: center;
-}
-.wish-list ul {
-}
-.wish-list li {
-    font-size: small;
-    padding-top: 1em;
-    padding-left: 2em;
-    text-align: left;
-}
-.wish-list li::marker {
-    content: "> ";
-}
-.wish-list a {
-    color: #3E2723;
-}
-.wish-list a:link {
-    text-decoration: none;
-}
-.wish-list a:hover {
-    text-decoration: none;
-    color: #D35400;
-}
-.wish-list a:visited {
-    text-decoration: none;
-}
-.wish-list a:active {
-    text-decoration: none;
+    padding-left: 50px;
+    width: 70%;
 }
 .wish-list span {
     color: #9E9D24
@@ -108,10 +81,15 @@ h3 {
     color: #9E9D24;
     padding-top: 1em;
 }
+.detail span a {
+    color: #F39C12;
+}
+.detail span a:hover {
+    color: #B0413E;
+}
 .detail p {
     padding-top: 2em;
 }
-
 
 .team-member {
     margin: 0 auto;
@@ -143,13 +121,6 @@ h3 {
     border-width: 1px;
     border-radius: 10px;
     border-color: #D0D3D4;
-}
-.wish-list {
-    padding-left: 50px;
-}
-.wish-list ul {
-    margin-top: 30px;
-    margin-left: 10px;
 }
 
 footer {
