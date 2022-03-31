@@ -40,7 +40,7 @@ span.logo {
 }
 
 .header nav {
-    padding-left: 0px;
+    padding-left: 0;
     padding-top: 40px;
     padding-bottom: 5px;
 }
@@ -56,7 +56,8 @@ span.logo {
     margin-left: 40px;
 }
 h2 {
-    text-align: center;
+    text-align: left;
+    padding-left: 100px;
     padding-bottom: 1em;
 }
 h3 {
@@ -80,7 +81,7 @@ h3 {
     content: "> ";
 }
 .wish-list a {
-    color: #17202A;
+    color: #3E2723;
 }
 .wish-list a:link {
     text-decoration: none;
@@ -95,9 +96,25 @@ h3 {
 .wish-list a:active {
     text-decoration: none;
 }
+.wish-list span {
+    color: #9E9D24
+}
+.detail {
+    margin: 20px;
+}
+.detail span {
+    font-style: italic;
+    font-size: small;
+    color: #9E9D24;
+    padding-top: 1em;
+}
+.detail p {
+    padding-top: 2em;
+}
+
 
 .team-member {
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 5px;
     width: 80%;
     height: 300px;
@@ -124,8 +141,8 @@ h3 {
 .team-member img {
     border-style: solid;
     border-width: 1px;
-    border-radius: 5px;
-    border-color: #17202A;
+    border-radius: 10px;
+    border-color: #D0D3D4;
 }
 .wish-list {
     padding-left: 50px;

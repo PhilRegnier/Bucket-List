@@ -4,10 +4,12 @@
 
 {% block body %}
 
-<div class="example-wrapper">
+<div class="detail">
     <h1>Wish details for : "{{ wish.title | capitalize }}"</h1>
-    <h4>author : {{ wish.author }}</h4>
-    <h5>on {{ wish.dateCreated | date("m/d/Y") }}</h5>
+    <span>
+        Author : {{ wish.author }}
+        on {{ wish.dateCreated | date("Y-m-d") }}
+    </span>
     <p>{{ wish.description | capitalize | nl2br }}</p>
 </div>
 {% endblock %}
