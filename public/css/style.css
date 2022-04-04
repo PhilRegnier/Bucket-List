@@ -130,10 +130,7 @@ footer {
     color: #F39C12;
     bottom: 0;
     width: 100%;
-    padding-top: 20px;
-    height: 40px;
+    height: 80px;
+    padding: 30px 0;
     position: absolute;
-}
-.copyright {
-
 }

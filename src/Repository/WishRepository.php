@@ -45,6 +45,16 @@ class WishRepository extends ServiceEntityRepository
         }
     }
 
+    public function findWishes()
+    {
+        $queryBuilder = $this->createQueryBuilder('w');
+        $queryBuilder->leftJoin('w.category','c')
+            ->addSelect('c');
+        $query = $queryBuilder->getQuery();
+
+        return $query->getResult();
+    }
+
     // /**
     //  * @return Wish[] Returns an array of Wish objects
     //  */
