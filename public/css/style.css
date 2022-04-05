@@ -38,11 +38,11 @@ a:active {
     padding-top: 20px;
     background: #16A085;
 }
-.header a {
-    padding-left: 150px;
+.header nav a {
     color: #17202A;
     text-transform: uppercase;
     font-family: Strange-Tales, fantasy;
+    padding: 0 50px;
 }
 
 .header nav {
@@ -58,6 +58,7 @@ a:active {
     color: #F39C12;
 }
 .logo-card {
+    padding-left: 150px;
     display: inline-block;
     vertical-align: middle;
     width: 65%;

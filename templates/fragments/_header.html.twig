@@ -16,8 +16,9 @@
         <a href="{{ path('main_home') }}">Home</a>
         <a href="{{ path('wish_list') }}">Wish-list</a>
         {% if is_granted('ROLE_USER') %}
-            <a href="{{ path('main_aboutUs') }}">About us</a>
+            <a href="{{ path('wish_add') }}">Make a wish</a>
         {% endif %}
+        <a href="{{ path('main_aboutUs') }}">About us</a>
         {% if not app.user %}
             <a href="{{ path('app_register') }}">Register</a>
             <a href="{{ path('app_login') }}">Log in</a>
