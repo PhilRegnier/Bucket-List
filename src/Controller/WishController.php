@@ -7,6 +7,7 @@ use App\Form\WishType;
 use App\Repository\WishRepository;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -40,6 +41,7 @@ class WishController extends AbstractController
             compact("wish"));
     }
     #[Route('/add', name: '_add')]
+    #[IsGranted('ROLE_USER')]
     public function ajouter(
         EntityManagerInterface $em,
         Request $request
