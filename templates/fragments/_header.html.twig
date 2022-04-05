@@ -1,11 +1,28 @@
 <header class="header">
-    <a class="logo" href="{{ path('main_home') }}" >
-        <img class="logo" src="{{ asset('resources/images/logo.png') }}" width="56" height="64" alt="Logo Bucket-List"/>
-        <span class="logo">Bucket-List</span>
-    </a>
+    <div class="logo-card">
+        <a class="logo" href="{{ path('main_home') }}" >
+            <img class="logo" src="{{ asset('resources/images/logo.png') }}" width="56" height="64" alt="Logo Bucket-List"/>
+            <span class="logo">Bucket-List</span>
+        </a>
+    </div>
+    <div class="connected-card">
+        {% if app.user %}
+            Connected as {{ app.user.username }}
+        {% else %}
+            Not connected
+        {% endif %}
+    </div>
     <nav>
-        <a href="{{ path('main_home') }}">Accueil</a>
+        <a href="{{ path('main_home') }}">Home</a>
         <a href="{{ path('wish_list') }}">Wish-list</a>
-        <a href="{{ path('main_aboutUs') }}">About us</a>
+        {% if is_granted('ROLE_USER') %}
+            <a href="{{ path('main_aboutUs') }}">About us</a>
+        {% endif %}
+        {% if not app.user %}
+            <a href="{{ path('app_register') }}">Register</a>
+            <a href="{{ path('app_login') }}">Log in</a>
+        {% else %}
+            <a href="{{ path('app_logout') }}">Log out</a>
+        {% endif %}
     </nav>
 </header>

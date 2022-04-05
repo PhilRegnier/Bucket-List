@@ -30,8 +30,6 @@ class Wish
     private $description;
 
     #[ORM\Column(type: 'string', length: 50)]
-    #[Assert\Type('string')]
-    #[Assert\NotBlank(message: "you have to sign yur wish.")]
     private $author;
 
     #[ORM\Column(type: 'boolean')]

@@ -50,6 +50,7 @@ class WishController extends AbstractController
 
         $wishForm->handleRequest($request);
         if ($wishForm->isSubmitted() && $wishForm->isValid()) {
+            $wish->setAuthor($this->getUser()->getUsername());
             $wish->setDateCreated(new DateTime());
             $wish->setIsPublished(true);
             $em->persist($wish);

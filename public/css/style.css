@@ -1,3 +1,12 @@
+@font-face {
+    font-family: Black-Way;
+    src: local("Black-Way"), url("../resources/fonts/BlackWay.otf");
+}
+@font-face {
+    font-family: Strange-Tales;
+    src: local("Strange-Tales"), url("../resources/fonts/StrangeTales.ttf");
+}
+
 *{
     margin:0;
     padding:0;
@@ -32,12 +41,8 @@ a:active {
 .header a {
     padding-left: 150px;
     color: #17202A;
-}
-
-span.logo {
-    margin-left: 10px;
-    font-size: 35px;
-    font-weight: 500;
+    text-transform: uppercase;
+    font-family: Strange-Tales;
 }
 
 .header nav {
@@ -52,6 +57,27 @@ span.logo {
 .header nav a:hover {
     color: #F39C12;
 }
+.logo-card {
+    display: inline-block;
+    vertical-align: middle;
+    width: 65%;
+}
+span.logo {
+    margin-left: 10px;
+    font-family: Black-Way, sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.connected-card {
+    font-size: smaller;
+    color: darkred;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+}
+
 .body {
     margin-top: 20px;
     margin-left: 40px;
@@ -60,6 +86,7 @@ h2 {
     text-align: left;
     padding-left: 100px;
     padding-bottom: 1em;
+    font-family: Black-Way, sans-serif;
 }
 h3 {
     padding-top: 1em;
@@ -69,9 +96,17 @@ h3 {
     padding-left: 50px;
     width: 70%;
 }
-.wish-list span {
+.wish-list h2 {
+    font-family: Black-Way, sans-serif;
+}
+.author {
     color: #9E9D24
 }
+
+.category {
+    color: #F39C12;
+}
+
 .detail {
     margin: 20px;
 }
