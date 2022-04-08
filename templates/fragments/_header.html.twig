@@ -8,6 +8,9 @@
     <div class="connected-card">
         {% if app.user %}
             Connected as {{ app.user.username }}
+            {% if is_granted('ROLE_ADMIN') %}
+                <a href="{{ path('admin') }}"><i class="fa-solid fa-screwdriver-wrench"></i></a>
+            {% endif %}
         {% else %}
             Not connected
         {% endif %}

@@ -55,22 +55,31 @@ class WishRepository extends ServiceEntityRepository
         return $query->getResult();
     }
 
-    // /**
-    //  * @return Wish[] Returns an array of Wish objects
-    //  */
-    /*
-    public function findByExampleField($value)
+     /**
+      * @return Wish[] Returns an array of Wish objects
+      */
+    public function findByWithFilter($keywords, $category): array
     {
-        return $this->createQueryBuilder('w')
-            ->andWhere('w.exampleField = :val')
-            ->setParameter('val', $value)
+        dump($keywords);
+        dump($category);
+        $queryBuilder = $this->createQueryBuilder('w');
+        if (!empty($category)) {
+            $queryBuilder
+                ->leftJoin('w.category', 'c')
+                ->andWhere('w.category = :category')
+                ->setParameter('category', $category);
+        }
+        if (!empty($keywords)) {
+            $queryBuilder
+                ->andWhere('w.title LIKE :keywords')
+                ->setParameter('keywords', '%'.$keywords.'%');
+        }
+        $queryBuilder
             ->orderBy('w.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+            ->setMaxResults(100);
+
+        return $queryBuilder->getQuery()->getResult();
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?Wish

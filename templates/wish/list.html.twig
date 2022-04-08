@@ -7,6 +7,11 @@
 <div class="wish-list">
 
     <h2>Wish-list</h2>
+
+    <div class="list-filtre">
+        {{ form(filtreForm) }}
+    </div>
+
     <div class="list-group">
         {% for wish in wishes %}
                 <a

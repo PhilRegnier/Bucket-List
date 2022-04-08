@@ -6,14 +6,17 @@
     font-family: Strange-Tales;
     src: local("Strange-Tales"), url("../resources/fonts/StrangeTales.ttf");
 }
-
+@font-face {
+    font-family: Calling-Code;
+    src: local("Calling-Code"), url("../resources/fonts/CallingCode-Regular.ttf");
+}
 *{
     margin:0;
     padding:0;
 }
 body{
     height:100%;
-    font-family: Verdana, sans-serif;
+    font-family: CallingCode, monospace;
 }
 html {
     min-height: 100%;
@@ -39,10 +42,13 @@ a:active {
     background: #16A085;
 }
 .header nav a {
-    color: #17202A;
+    color: #E5E8E8;
     text-transform: uppercase;
     font-family: Strange-Tales, fantasy;
     padding: 0 50px;
+}
+.header nav a:hover {
+    color: #F39C12;
 }
 
 .header nav {
@@ -51,18 +57,19 @@ a:active {
     padding-bottom: 5px;
 }
 
-.header nav a {
-    color: #E5E8E8;
-}
-.header nav a:hover {
-    color: #F39C12;
-}
 .logo-card {
-    padding-left: 150px;
+    padding-left: 100px;
     display: inline-block;
     vertical-align: middle;
     width: 65%;
 }
+.logo-card a {
+    color: #531E80;
+}
+.logo-card a:hover {
+    color: #8030C3;
+}
+
 span.logo {
     margin-left: 10px;
     font-family: Black-Way, sans-serif;
@@ -72,11 +79,21 @@ span.logo {
 }
 
 .connected-card {
-    font-size: smaller;
-    color: darkred;
+    font-family: Calling-Code, monospace;
+    font-size: large;
+    color: #E5E8E8;
     display: inline-block;
     vertical-align: top;
     width: 30%;
+}
+.connected-card i {
+    font-size:22px;
+}
+.connected-card a {
+    color: #E5E8E8;
+}
+.connected-card a:hover {
+    color: #E5E8E8;
 }
 
 .body {
@@ -92,6 +109,30 @@ h2 {
 h3 {
     padding-top: 1em;
     padding-bottom: 1em;
+}
+.home {
+    margin: 0 auto;
+    width: 80%;
+    height: 60%;
+}
+.home p {
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-family: Strange-Tales, serif;
+    padding: 2em 0;
+}
+.home-image {
+    display: block;
+    margin-right: auto;
+    margin-left:auto;
+    width: 60%;
+}
+.home a {
+    color: #531E80;
+}
+.home a:hover {
+    color: #8030C3;
 }
 .wish-list {
     padding-left: 50px;

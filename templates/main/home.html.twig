@@ -5,6 +5,9 @@
 {% endblock %}
 
 {% block body %}
-    <p>Don't you need to write a wish ?</p>
-    <p>Here you are ! Just click <a href="{{ asset('wish/add') }}">Here</a></p>
+    <div class="home">
+        <p>Don't you need to wish something ?</p>
+        <img class="home-image" src="{{ asset('resources/images/pissenlit.jpg') }}">
+        <p>Here you are ! Just click <a href="{{ path('wish_add') }}">Here</a></p>
+    </div>
 {% endblock %}

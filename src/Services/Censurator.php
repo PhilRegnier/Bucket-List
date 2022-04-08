@@ -2,23 +2,26 @@
 
 namespace App\Services;
 
+use App\Repository\JuronRepository;
+
 class Censurator
 {
-    public function purify($sentence): string
+    private array $jurons = [];
+
+    public function __construct(JuronRepository $juronRepository)
     {
-        //$jurons= file('../data/bad_words.txt','r');
-        //$jurons = explode("\n", $file,true);
-        //var_dump($jurons);
+        $this->jurons = $juronRepository->findAll();
+    }
 
-        $jurons[] = 'connard';
-        $jurons[] = 'enculé';
-
-        foreach ($jurons as $juron)
+    public function purify(string $sentence): string
+    {
+        foreach ($this->jurons as $juron)
         {
-            if (strpos($sentence, $juron))  {
-                var_dump($juron);
-                str_replace($juron, '***', $sentence);
-            }
+            $mot = $juron->getMot();
+            $str = substr($mot, 0, 1)
+                . str_repeat('*', mb_strlen($mot)-2)
+                . substr($mot, -1);
+            $sentence = str_ireplace($mot, $str, $sentence);
         }
         return $sentence;
     }
