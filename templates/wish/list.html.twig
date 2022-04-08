@@ -9,7 +9,10 @@
     <h2>Wish-list</h2>
 
     <div class="list-filtre">
-        {{ form(filtreForm) }}
+        {{ form_start(filtreForm) }}
+        {{ form_widget(filtreForm) }}
+        <button class="btn btn-primary">Filter</button>
+        {{ form_end(filtreForm) }}
     </div>
 
     <div class="list-group">

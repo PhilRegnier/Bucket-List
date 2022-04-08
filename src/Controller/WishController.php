@@ -41,8 +41,6 @@ class WishController extends AbstractController
                     'choice_label' => 'name',
                     'required' => false
                 ] )
-            ->add('Search', SubmitType::class,
-                ['label' => 'Filter'] )
             ->getForm();
 
         $filtreForm->handleRequest($request);
